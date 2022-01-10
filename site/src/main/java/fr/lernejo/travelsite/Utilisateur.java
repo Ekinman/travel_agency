@@ -1,4 +1,5 @@
 package fr.lernejo.travelsite;
+
 import org.springframework.util.StringUtils;
 
 import java.util.regex.Matcher;
@@ -11,15 +12,10 @@ public class Utilisateur {
     private final String userName;
     private final String userCountry;
     private final String weatherExpectation;
-    private final int  minimumTemperatureDistance;
+    private final int minimumTemperatureDistance;
 
 
-
-
-
-
-    public Utilisateur(String userEmail, String userName, String userCountry, String weatherExpectation, int minimumTemperatureDistance)
-    {
+    public Utilisateur(String userEmail, String userName, String userCountry, String weatherExpectation, int minimumTemperatureDistance) {
 
         this.userEmail = userEmail;
         this.userName = userName;
@@ -28,6 +24,13 @@ public class Utilisateur {
         this.minimumTemperatureDistance = minimumTemperatureDistance;
     }
 
+    public Utilisateur() {
+        this.userEmail = "";
+        this.userName = "";
+        this.userCountry = "";
+        this.weatherExpectation = "";
+        this.minimumTemperatureDistance = 0;
+    }
 
     public boolean validInscription() {
 
